@@ -25,11 +25,7 @@
       
             #map {
                 width: 1920px;
-<<<<<<< HEAD
                 height: 720px;
-=======
-                height: 1080px;
->>>>>>> e05692362a422658875b66aca751d19d05627b37
             }
         </style>
     </head>
@@ -46,6 +42,8 @@
             var wmsLayer = L.tileLayer.wms('http://ows.mundialis.de/services/service?', {
                 layers: 'TOPO-OSM-WMS'
             }).addTo(map);
+
+            var marker = L.marker([-7.7639847, 110.3704093]).bindPopup('Teknik Geodesi UGM').addTo(map);
 
             L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
